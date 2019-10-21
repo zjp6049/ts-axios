@@ -46,6 +46,7 @@ export function bulidURL(url: string, params?: any): string {
   // 拼接url
   let serializedParams  = parts.join('&')
   if (serializedParams) {
+    // 去除哈希
     const markIndex = url.indexOf('#')
     if (markIndex !== -1) {
       url = url.slice(0, markIndex)
